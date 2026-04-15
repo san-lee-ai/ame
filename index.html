@@ -143,6 +143,10 @@ h2 em{font-style:italic;color:var(--teal)}
 footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .foot-logo{font-family:var(--ff-display);font-size:18px;color:var(--ink)}
 .foot-note{font-size:12px;color:var(--ink2);opacity:0.5}
+.foot-email{font-size:13px;color:var(--teal);text-decoration:none;font-weight:500;transition:opacity 0.2s}
+.foot-email:hover{opacity:0.7}
+.cta-email{display:inline-block;margin-top:20px;font-size:14px;color:var(--teal);text-decoration:none;font-weight:500;letter-spacing:0.02em;transition:opacity 0.2s}
+.cta-email:hover{opacity:0.7}
 
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
@@ -365,10 +369,11 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
     <h2>A new model for<br>broader <em>healthcare</em></h2>
     <p class="cta-sub">AME Mobile is building a more connected healthcare future &mdash; where care moves freely, systems work together, and communities have better access to the services they need.</p>
     <div class="cta-actions">
-      <a href="mailto:contact@amemobile.com" class="btn-primary">Start a Conversation</a>
+      <a href="mailto:info@amemobile.net" class="btn-primary">Start a Conversation</a>
       <a href="#about" class="btn-ghost">See Our Approach &rarr;</a>
     </div>
     <p class="tagline">Mobile Care &middot; Connected Ecosystems &middot; Broader Access</p>
+    <a href="mailto:info@amemobile.net" class="cta-email">info@amemobile.net</a>
   </div>
 
   <!-- FOOTER -->
@@ -377,7 +382,10 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
       <span class="short">AME Mobile</span>
       <span class="long">American Medical Ecosystem Mobile</span>
     </div>
-    <p class="foot-note">Mobile Care. Connected Ecosystems. Broader Access.</p>
+    <div style="text-align:right">
+      <a href="mailto:info@amemobile.net" class="foot-email">info@amemobile.net</a>
+      <p class="foot-note" style="margin-top:4px">Mobile Care. Connected Ecosystems. Broader Access.</p>
+    </div>
   </footer>
 
 </div>
