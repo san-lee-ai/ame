@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AME Mobile — American Medical Ecosystem Mobile</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0f1a2e;
+  --ink2:#2d4a6e;
+  --mist:#f0f4f8;
+  --teal:#0e7c5e;
+  --teal-lt:#e0f5ee;
+  --teal-md:#1d9e75;
+  --coral:#d85a30;
+  --coral-lt:#faece7;
+  --blue:#185fa5;
+  --blue-lt:#e6f1fb;
+  --amber:#ba7517;
+  --amber-lt:#faeeda;
+  --divider:rgba(15,26,46,0.1);
+  --ff-display:'DM Serif Display',serif;
+  --ff-body:'DM Sans',sans-serif;
+}
+
+body{font-family:var(--ff-body);color:var(--ink);background:#fff;overflow-x:hidden}
+
+.page{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:0.5px solid var(--divider)}
+.logo-mark{display:flex;flex-direction:column;gap:2px}
+.logo-mark .short{font-family:var(--ff-display);font-size:22px;color:var(--ink);letter-spacing:-0.5px}
+.logo-mark .long{font-size:10px;color:var(--ink2);letter-spacing:0.06em;text-transform:uppercase;font-weight:400}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links a{font-size:13px;color:var(--ink2);text-decoration:none;letter-spacing:0.01em;transition:all 0.2s;padding:6px 14px;border-radius:40px}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{background:var(--ink);color:#fff}
+.nav-links a.active:hover{background:var(--teal);color:#fff}
+.nav-cta{background:var(--ink);color:#fff!important;padding:8px 18px;border-radius:40px;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.2s}
+.nav-cta:hover{background:var(--teal)!important;color:#fff!important}
+
+/* HERO */
+.hero{padding:80px 0 64px;position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--teal-lt);border:0.5px solid rgba(14,124,94,0.2);padding:6px 14px;border-radius:40px;font-size:12px;color:var(--teal);letter-spacing:0.05em;text-transform:uppercase;font-weight:500;margin-bottom:28px}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--teal-md);flex-shrink:0}
+h1{font-family:var(--ff-display);font-size:clamp(44px,7vw,72px);line-height:1.05;letter-spacing:-1.5px;color:var(--ink);max-width:760px;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--teal)}
+.hero-sub{font-size:18px;color:var(--ink2);line-height:1.65;max-width:560px;margin-bottom:40px;font-weight:300}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--ink);color:#fff;padding:14px 28px;border-radius:40px;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--teal)}
+.btn-ghost{background:transparent;color:var(--ink);padding:14px 28px;border-radius:40px;font-size:14px;font-weight:400;text-decoration:none;border:0.5px solid var(--divider);transition:all 0.2s;cursor:pointer}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.hero-rule{display:flex;align-items:center;gap:16px;margin-top:64px;padding-top:40px;border-top:0.5px solid var(--divider)}
+.hero-stat{display:flex;flex-direction:column;gap:4px;flex:1}
+.hero-stat .num{font-family:var(--ff-display);font-size:32px;color:var(--ink);letter-spacing:-1px}
+.hero-stat .label{font-size:12px;color:var(--ink2);letter-spacing:0.03em}
+.stat-div{width:0.5px;height:40px;background:var(--divider)}
+
+/* BRAND STRIP */
+.brand-strip{background:var(--ink);color:#fff;padding:20px 0;overflow:hidden}
+.strip-inner{display:flex;gap:48px;animation:marquee 28s linear infinite;white-space:nowrap}
+.strip-item{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;flex-shrink:0}
+.strip-item span{color:var(--teal-md);opacity:1}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:80px 0}
+.section-tag{font-size:11px;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;margin-bottom:16px}
+h2{font-family:var(--ff-display);font-size:clamp(32px,4vw,46px);letter-spacing:-1px;color:var(--ink);line-height:1.1;margin-bottom:20px}
+h2 em{font-style:italic;color:var(--teal)}
+.section-body{font-size:16px;color:var(--ink2);line-height:1.7;max-width:580px;font-weight:300}
+
+/* ABOUT SPLIT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-callout{background:var(--teal);color:#fff;padding:28px 28px;border-radius:16px;font-family:var(--ff-display);font-size:22px;font-style:italic;line-height:1.4;margin-top:32px}
+.about-callout .credit{font-family:var(--ff-body);font-style:normal;font-size:12px;opacity:0.7;margin-top:12px;letter-spacing:0.05em}
+.about-img{width:100%;border-radius:16px;display:block;box-shadow:0 12px 48px rgba(15,26,46,0.14);margin-bottom:24px}
+.about-img-caption{font-size:12px;color:var(--ink2);opacity:0.55;letter-spacing:0.04em;text-align:center;margin-top:-16px;margin-bottom:20px}
+
+/* WHAT WE DO — flex layout avoids empty gray cell with 5 items */
+.services-grid{display:flex;flex-wrap:wrap;gap:1px;background:var(--divider);border:0.5px solid var(--divider);border-radius:16px;overflow:hidden;margin-top:48px}
+.service-card{background:#fff;padding:28px 24px;transition:background 0.2s;flex:1 1 calc(33.333% - 1px);min-width:250px}
+.service-card:hover{background:var(--mist)}
+.svc-icon{width:36px;height:36px;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:center}
+.svc-title{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.svc-body{font-size:13px;color:var(--ink2);line-height:1.6;font-weight:300}
+
+/* PROBLEM */
+.problem-section{background:var(--ink);border-radius:24px;padding:64px 56px;margin:0}
+.problem-section .section-tag{color:var(--teal-md)}
+.problem-section h2{color:#fff}
+.problem-section h2 em{color:var(--teal-md)}
+.problem-lines{margin-top:40px;display:flex;flex-direction:column;gap:0}
+.pline{display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:0.5px solid rgba(255,255,255,0.08)}
+.pline:last-child{border-bottom:none}
+.pline-num{font-family:var(--ff-display);font-size:13px;color:rgba(255,255,255,0.25);width:28px;flex-shrink:0}
+.pline-text{font-size:17px;color:rgba(255,255,255,0.75);font-weight:300;line-height:1.5}
+.pline-text strong{color:#fff;font-weight:500}
+.problem-answer{margin-top:40px;padding-top:40px;border-top:0.5px solid rgba(255,255,255,0.12);display:flex;gap:24px;align-items:flex-start}
+.pa-icon{width:40px;height:40px;border-radius:8px;background:var(--teal);flex-shrink:0;margin-top:2px}
+.pa-text{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.65;font-weight:300}
+.pa-text strong{color:#fff}
+
+/* TRANSFORMATION */
+.rhtp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px}
+.rhtp-pillars{display:flex;flex-direction:column;gap:12px}
+.pillar{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--mist);border-radius:10px;transition:all 0.2s}
+.pillar:hover{background:var(--teal-lt)}
+.pillar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.pillar-text{font-size:14px;color:var(--ink);font-weight:400}
+.rhtp-visual{background:var(--ink);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.rv-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:24px}
+.rv-center{text-align:center;margin-bottom:24px}
+.rv-center .big{font-family:var(--ff-display);font-size:40px;color:#fff;letter-spacing:-1px;display:block}
+.rv-center .small{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase}
+.rv-rings{display:flex;flex-direction:column;gap:8px}
+.rv-ring{display:flex;align-items:center;gap:10px}
+.ring-bar{height:4px;border-radius:4px;flex:1}
+.ring-num{font-size:11px;color:rgba(255,255,255,0.4);width:24px;text-align:right}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.why-card{padding:28px 24px;border:0.5px solid var(--divider);border-radius:16px;transition:all 0.2s}
+.why-card:hover{border-color:var(--teal);background:var(--teal-lt)}
+.why-num{font-family:var(--ff-display);font-size:13px;color:var(--teal);margin-bottom:16px}
+.why-title{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.why-body{font-size:13px;color:var(--ink2);line-height:1.6;font-weight:300}
+
+/* CLOSING CTA */
+.cta-section{background:var(--teal-lt);border-radius:24px;padding:80px 56px;text-align:center;border:0.5px solid rgba(14,124,94,0.2);margin-bottom:80px}
+.cta-section h2{max-width:600px;margin:0 auto 16px}
+.cta-sub{font-size:16px;color:var(--ink2);max-width:480px;margin:0 auto 40px;font-weight:300}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.tagline{font-size:12px;color:rgba(14,124,94,0.6);margin-top:24px;letter-spacing:0.06em;text-transform:uppercase}
+
+/* FOOTER */
+footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.foot-logo{font-family:var(--ff-display);font-size:18px;color:var(--ink)}
+.foot-note{font-size:12px;color:var(--ink2);opacity:0.5}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:680px){
+  .about-img{margin-top:0}
+  .about-grid,.rhtp-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .hero-rule{flex-wrap:wrap}
+  .nav-links{display:none}
+  .problem-section{padding:40px 28px}
+  .cta-section{padding:48px 28px}
+  h1{font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">AME Mobile — American Medical Ecosystem Mobile landing page for rural healthcare transformation</h2>
+
+<div class="page">
+  <nav class="fade-up visible">
+    <div class="logo-mark">
+      <span class="short">AME Mobile</span>
+      <span class="long">American Medical Ecosystem Mobile</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">What We Do</a>
+      <a href="#rhtp">RHTP</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Partner With Us</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow fade-up visible"><span class="dot"></span>Healthcare Transformation Initiative</div>
+    <h1 class="fade-up visible">Building a <em>Broader</em><br>Healthcare Future</h1>
+    <p class="hero-sub fade-up visible">AME Mobile expands care access through mobile health, telehealth, connected infrastructure, and technology-enabled patient journeys — designed for real communities.</p>
+    <div class="hero-actions fade-up visible">
+      <a href="#about" class="btn-primary">Explore Our Vision</a>
+      <a href="#contact" class="btn-ghost">Partner With Us &rarr;</a>
+    </div>
+    <div class="hero-rule fade-up visible">
+      <div class="hero-stat"><span class="num">Rural</span><span class="label">Health Transformation</span></div>
+      <div class="stat-div"></div>
+      <div class="hero-stat"><span class="num">Mobile</span><span class="label">Care Delivery</span></div>
+      <div class="stat-div"></div>
+      <div class="hero-stat"><span class="num">FHIR</span><span class="label">Connected Ecosystem</span></div>
+      <div class="stat-div"></div>
+      <div class="hero-stat"><span class="num">RHTP</span><span class="label">Aligned Programs</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE STRIP -->
+<div class="brand-strip">
+  <div class="strip-inner">
+    <span class="strip-item">Mobile Healthcare Access</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Telehealth Enablement</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Connected Patient Journeys</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Digital Health Infrastructure</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Rural Health Transformation</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">American Medical Ecosystem Mobile</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Mobile Healthcare Access</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Telehealth Enablement</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Connected Patient Journeys</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Digital Health Infrastructure</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">Rural Health Transformation</span>
+    <span class="strip-item"><span>&middot;</span></span>
+    <span class="strip-item">American Medical Ecosystem Mobile</span>
+    <span class="strip-item"><span>&middot;</span></span>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid fade-up">
+      <div>
+        <p class="section-tag">What We Stand For</p>
+        <h2>Not just mobile.<br><em>An ecosystem.</em></h2>
+        <div class="about-callout">
+          &ldquo;The future of healthcare depends on a connected medical ecosystem &mdash; mobile, adaptive, and capable of reaching people wherever care is needed.&rdquo;
+          <p class="credit">AME Mobile &middot; Brand Statement</p>
+        </div>
+      </div>
+      <div style="margin-top:56px">
+        <img src="images/rural_health.png" alt="AME Mobile — mobile health vehicle bringing care to a rural community" class="about-img">
+        <p class="section-body">We combine healthcare access, digital tools, telehealth, coordination, and operational thinking into one broader vision for modern care delivery &mdash; especially for rural, underserved, and distributed communities.</p>
+        <p class="section-body" style="margin-top:16px">Our mission: to broaden healthcare access and strengthen care delivery through a mobile, connected, and technology-enabled medical ecosystem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding-top:0">
+    <p class="section-tag fade-up">What We Build</p>
+    <h2 class="fade-up" style="max-width:480px">Five pillars of a <em>connected</em> care model</h2>
+    <div class="services-grid fade-up">
+      <div class="service-card">
+        <div class="svc-icon" style="background:var(--teal-lt)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="9" width="14" height="7" rx="2" stroke="var(--teal)" stroke-width="1.5"/><path d="M6 9V6a3 3 0 016 0v3" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p class="svc-title">Mobile Healthcare Access</p>
+        <p class="svc-body">We extend care into the field, community, and remote settings through flexible delivery models that travel with the patient.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon" style="background:var(--blue-lt)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="10" rx="2" stroke="var(--blue)" stroke-width="1.5"/><path d="M6 16h6M9 13v3" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p class="svc-title">Telehealth Enablement</p>
+        <p class="svc-body">Virtual care connected to real operations, follow-up, and measurable outcomes &mdash; not isolated video calls.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon" style="background:var(--amber-lt)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="var(--amber)" stroke-width="1.5"/><path d="M9 6v3l2 2" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p class="svc-title">Connected Patient Journeys</p>
+        <p class="svc-body">We guide patients from screening and diagnosis through to treatment and ongoing care &mdash; with no gaps in the handoff.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon" style="background:var(--coral-lt)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="10" y="3" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="3" y="10" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="10" y="10" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/></svg>
+        </div>
+        <p class="svc-title">Digital Health Infrastructure</p>
+        <p class="svc-body">Technology foundations &mdash; FHIR integration, EHR connectivity, reporting &mdash; that make the ecosystem actually work together.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon" style="background:var(--teal-lt)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 14l4-4 3 3 5-6" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="svc-title">Transformation-Focused Innovation</p>
+        <p class="svc-body">Work aligned with healthcare transformation goals &mdash; access, continuity, and long-term sustainability at the forefront.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+</div>
+
+<div class="page" style="padding-bottom:80px">
+  <div class="problem-section fade-up">
+    <p class="section-tag">The Challenge</p>
+    <h2>Healthcare needs more<br>than <em>tools</em></h2>
+    <div class="problem-lines">
+      <div class="pline"><span class="pline-num">01</span><span class="pline-text"><strong>Access without continuity</strong> creates gaps that put patients at risk.</span></div>
+      <div class="pline"><span class="pline-num">02</span><span class="pline-text"><strong>Technology without workflow</strong> creates friction that stalls adoption.</span></div>
+      <div class="pline"><span class="pline-num">03</span><span class="pline-text"><strong>Services without coordination</strong> do not scale to the communities that need them most.</span></div>
+    </div>
+    <div class="problem-answer">
+      <div class="pa-icon"></div>
+      <p class="pa-text"><strong>AME Mobile addresses this</strong> by advancing an American Medical Ecosystem Mobile model &mdash; where healthcare is designed as an interconnected system rather than a collection of disconnected parts. Broader reach. Stronger continuity. Technology with practical value.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- RHTP -->
+  <section id="rhtp">
+    <p class="section-tag fade-up">RHTP Alignment</p>
+    <h2 class="fade-up">Built for healthcare<br><em>transformation</em></h2>
+    <p class="section-body fade-up">AME Mobile is designed for a future where transformation depends on broader access, operational coordination, digital infrastructure, and sustainable delivery models &mdash; especially in rural and underserved settings.</p>
+    <div class="rhtp-grid fade-up">
+      <div class="rhtp-pillars">
+        <div class="pillar"><div class="pillar-dot" style="background:var(--teal)"></div><span class="pillar-text">Rural health access &amp; equity</span></div>
+        <div class="pillar"><div class="pillar-dot" style="background:var(--blue)"></div><span class="pillar-text">Telehealth &amp; remote care enablement</span></div>
+        <div class="pillar"><div class="pillar-dot" style="background:var(--amber)"></div><span class="pillar-text">Care continuity &amp; coordination</span></div>
+        <div class="pillar"><div class="pillar-dot" style="background:var(--coral)"></div><span class="pillar-text">Community-based service delivery</span></div>
+        <div class="pillar"><div class="pillar-dot" style="background:var(--teal)"></div><span class="pillar-text">Infrastructure modernization</span></div>
+        <div class="pillar"><div class="pillar-dot" style="background:var(--blue)"></div><span class="pillar-text">Sustainable healthcare models</span></div>
+      </div>
+      <div class="rhtp-visual">
+        <p class="rv-label">Ecosystem Coverage</p>
+        <div class="rv-center">
+          <span class="big">RHTP</span>
+          <span class="small">Transformation Aligned</span>
+        </div>
+        <div class="rv-rings">
+          <div class="rv-ring"><div class="ring-bar" style="background:var(--teal-md);width:90%"></div><span class="ring-num">90%</span></div>
+          <div class="rv-ring"><div class="ring-bar" style="background:rgba(24,95,165,0.7);width:78%"></div><span class="ring-num">78%</span></div>
+          <div class="rv-ring"><div class="ring-bar" style="background:rgba(186,117,23,0.7);width:84%"></div><span class="ring-num">84%</span></div>
+          <div class="rv-ring"><div class="ring-bar" style="background:rgba(216,90,48,0.6);width:70%"></div><span class="ring-num">70%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section style="padding-top:0">
+    <p class="section-tag fade-up">Why It Matters</p>
+    <h2 class="fade-up">Making healthcare work<br>as an <em>ecosystem</em></h2>
+    <div class="why-grid fade-up">
+      <div class="why-card"><p class="why-num">01</p><p class="why-title">Broader Reach</p><p class="why-body">Care that moves into communities &mdash; not waiting for communities to come to it.</p></div>
+      <div class="why-card"><p class="why-num">02</p><p class="why-title">Stronger Continuity</p><p class="why-body">Patients followed through every stage of their journey, from screening to sustained care.</p></div>
+      <div class="why-card"><p class="why-num">03</p><p class="why-title">Smarter Coordination</p><p class="why-body">Systems that talk to each other &mdash; and people who know how to make them work together.</p></div>
+      <div class="why-card"><p class="why-num">04</p><p class="why-title">Practical Technology</p><p class="why-body">Digital tools with real workflow value, not just platforms deployed and left behind.</p></div>
+      <div class="why-card"><p class="why-num">05</p><p class="why-title">Resilient Delivery</p><p class="why-body">Models built to sustain &mdash; financially, operationally, and in the communities they serve.</p></div>
+      <div class="why-card"><p class="why-num">06</p><p class="why-title">Ecosystem Thinking</p><p class="why-body">Every service, tool, and partnership designed as part of a connected whole &mdash; not isolated parts.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div id="contact" class="cta-section fade-up">
+    <p class="section-tag">Start a Conversation</p>
+    <h2>A new model for<br>broader <em>healthcare</em></h2>
+    <p class="cta-sub">AME Mobile is building a more connected healthcare future &mdash; where care moves freely, systems work together, and communities have better access to the services they need.</p>
+    <div class="cta-actions">
+      <a href="mailto:contact@amemobile.com" class="btn-primary">Start a Conversation</a>
+      <a href="#about" class="btn-ghost">See Our Approach &rarr;</a>
+    </div>
+    <p class="tagline">Mobile Care &middot; Connected Ecosystems &middot; Broader Access</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo-mark">
+      <span class="short">AME Mobile</span>
+      <span class="long">American Medical Ecosystem Mobile</span>
+    </div>
+    <p class="foot-note">Mobile Care. Connected Ecosystems. Broader Access.</p>
+  </footer>
+
+</div>
+
+<script>
+// Fade-in on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// Active nav highlight on scroll
+const sections = [
+  document.getElementById('about'),
+  document.getElementById('services'),
+  document.getElementById('rhtp'),
+  document.getElementById('contact')
+];
+const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+
+function updateActiveNav() {
+  const scrollY = window.scrollY + 120;
+  let current = '';
+  sections.forEach(sec => {
+    if (sec && sec.offsetTop <= scrollY) current = sec.id;
+  });
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href').replace('#', '');
+    a.classList.toggle('active', href === current);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, {passive: true});
+updateActiveNav();
+</script>
+</body>
+</html>
