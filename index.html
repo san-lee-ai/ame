@@ -345,25 +345,25 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
       <div class="rhtp-visual">
         <div class="rv-header">
           <span class="rv-label">RHTP Tracker</span>
-          <span class="rv-live"><span class="rv-live-dot"></span>Live Data</span>
+          <span class="rv-live" id="rhtp-freshness"><span class="rv-live-dot"></span><span id="rhtp-updated">Live</span></span>
         </div>
         <p class="rv-title">Nationwide Rural Health<br>Activity Dashboard</p>
         <p class="rv-sub">AI-parsed tracking of Rural Health Transformation Program implementation across all U.S. states</p>
-        <div class="rv-stats">
+        <div class="rv-stats" id="rhtp-stats">
           <div class="rv-stat">
-            <div class="rv-stat-num">50</div>
+            <div class="rv-stat-num" id="stat-states">51</div>
             <div class="rv-stat-label">States Tracked</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">285</div>
+            <div class="rv-stat-num" id="stat-docs">290</div>
             <div class="rv-stat-label">Documents Extracted</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">690</div>
+            <div class="rv-stat-num" id="stat-activities">711</div>
             <div class="rv-stat-label">Activities Parsed</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">48</div>
+            <div class="rv-stat-num" id="stat-states-content">50</div>
             <div class="rv-stat-label">States with Content</div>
           </div>
         </div>
@@ -450,6 +450,44 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav, {passive: true});
 updateActiveNav();
+
+// RHTP live stats — fetches from rhtp.amemobile.net/api/stats every 2 hours
+const RHTP_STATS_URL = 'https://rhtp.amemobile.net/api/stats';
+
+function animateCount(el, target) {
+  const start = parseInt(el.textContent) || 0;
+  const diff = target - start;
+  if (diff === 0) return;
+  const duration = 800;
+  const startTime = performance.now();
+  function step(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(start + diff * ease);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+async function fetchRHTPStats() {
+  try {
+    const res = await fetch(RHTP_STATS_URL);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.states)            animateCount(document.getElementById('stat-states'), data.states);
+    if (data.documents)         animateCount(document.getElementById('stat-docs'), data.documents);
+    if (data.activities)        animateCount(document.getElementById('stat-activities'), data.activities);
+    if (data.statesWithContent) animateCount(document.getElementById('stat-states-content'), data.statesWithContent);
+    const now = new Date();
+    document.getElementById('rhtp-updated').textContent =
+      now.toLocaleString('en-US', {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'});
+  } catch (e) {
+    // API not yet available — static fallback values remain shown
+  }
+}
+
+fetchRHTPStats();
+setInterval(fetchRHTPStats, 2 * 60 * 60 * 1000); // refresh every 2 hours
 </script>
 </body>
 </html>
