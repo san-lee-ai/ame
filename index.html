@@ -114,15 +114,24 @@ h2 em{font-style:italic;color:var(--teal)}
 .pillar:hover{background:var(--teal-lt)}
 .pillar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .pillar-text{font-size:14px;color:var(--ink);font-weight:400}
-.rhtp-visual{background:var(--ink);border-radius:20px;padding:32px;position:relative;overflow:hidden}
-.rv-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:24px}
-.rv-center{text-align:center;margin-bottom:24px}
-.rv-center .big{font-family:var(--ff-display);font-size:40px;color:#fff;letter-spacing:-1px;display:block}
-.rv-center .small{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase}
-.rv-rings{display:flex;flex-direction:column;gap:8px}
-.rv-ring{display:flex;align-items:center;gap:10px}
-.ring-bar{height:4px;border-radius:4px;flex:1}
-.ring-num{font-size:11px;color:rgba(255,255,255,0.4);width:24px;text-align:right}
+.rhtp-visual{background:var(--ink);border-radius:20px;padding:28px 32px;position:relative;overflow:hidden}
+.rv-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.rv-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.rv-live{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--teal-md);letter-spacing:0.06em;text-transform:uppercase}
+.rv-live-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-md);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.rv-title{font-family:var(--ff-display);font-size:18px;color:#fff;margin-bottom:4px;letter-spacing:-0.3px}
+.rv-sub{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.5;margin-bottom:24px}
+.rv-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.rv-stat{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px}
+.rv-stat-num{font-family:var(--ff-display);font-size:26px;color:#fff;letter-spacing:-1px;line-height:1}
+.rv-stat-label{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.03em}
+.rv-divider{border:none;border-top:0.5px solid rgba(255,255,255,0.08);margin-bottom:16px}
+.rv-link{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.3);border-radius:10px;padding:10px 14px;transition:background 0.2s}
+.rv-link:hover{background:rgba(29,158,117,0.25)}
+.rv-link-text{font-size:12px;color:var(--teal-md);font-weight:500;letter-spacing:0.02em}
+.rv-link-arrow{font-size:14px;color:var(--teal-md)}
+.rv-disclaimer{font-size:10px;color:rgba(255,255,255,0.2);margin-top:10px;letter-spacing:0.02em}
 
 /* WHY */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
@@ -334,17 +343,36 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
         <div class="pillar"><div class="pillar-dot" style="background:var(--blue)"></div><span class="pillar-text">Sustainable healthcare models</span></div>
       </div>
       <div class="rhtp-visual">
-        <p class="rv-label">Ecosystem Coverage</p>
-        <div class="rv-center">
-          <span class="big">RHTP</span>
-          <span class="small">Transformation Aligned</span>
+        <div class="rv-header">
+          <span class="rv-label">RHTP Tracker</span>
+          <span class="rv-live"><span class="rv-live-dot"></span>Live Data</span>
         </div>
-        <div class="rv-rings">
-          <div class="rv-ring"><div class="ring-bar" style="background:var(--teal-md);width:90%"></div><span class="ring-num">90%</span></div>
-          <div class="rv-ring"><div class="ring-bar" style="background:rgba(24,95,165,0.7);width:78%"></div><span class="ring-num">78%</span></div>
-          <div class="rv-ring"><div class="ring-bar" style="background:rgba(186,117,23,0.7);width:84%"></div><span class="ring-num">84%</span></div>
-          <div class="rv-ring"><div class="ring-bar" style="background:rgba(216,90,48,0.6);width:70%"></div><span class="ring-num">70%</span></div>
+        <p class="rv-title">Nationwide Rural Health<br>Activity Dashboard</p>
+        <p class="rv-sub">AI-parsed tracking of Rural Health Transformation Program implementation across all U.S. states</p>
+        <div class="rv-stats">
+          <div class="rv-stat">
+            <div class="rv-stat-num">50</div>
+            <div class="rv-stat-label">States Tracked</div>
+          </div>
+          <div class="rv-stat">
+            <div class="rv-stat-num">285</div>
+            <div class="rv-stat-label">Documents Extracted</div>
+          </div>
+          <div class="rv-stat">
+            <div class="rv-stat-num">690</div>
+            <div class="rv-stat-label">Activities Parsed</div>
+          </div>
+          <div class="rv-stat">
+            <div class="rv-stat-num">48</div>
+            <div class="rv-stat-label">States with Content</div>
+          </div>
         </div>
+        <hr class="rv-divider">
+        <a href="https://rhtp.amemobile.net" target="_blank" rel="noopener" class="rv-link">
+          <span class="rv-link-text">rhtp.amemobile.net</span>
+          <span class="rv-link-arrow">&rarr;</span>
+        </a>
+        <p class="rv-disclaimer">Not affiliated with HRSA &middot; For research use</p>
       </div>
     </div>
   </section>
