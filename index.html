@@ -3,64 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rural Care Journey — by AME Mobile</title>
-<meta name="description" content="Rural Care Journey is AME Mobile's research and intelligence platform for rural health transformation, funding opportunities, state programs, vendors, documents, and community connections.">
-<meta name="keywords" content="AME Mobile, American Medical Ecosystem Mobile, Rural Care Journey, rural healthcare, mobile health, telehealth, RHTP, rural health transformation, opportunity intelligence, vendor matching, connected care, FHIR, healthcare access, underserved communities">
+<title>Rural Care Journey (RCJ) — RHTP Grants, Awards &amp; State Intelligence | AME Mobile</title>
+<meta name="description" content="Rural Care Journey (RCJ) by AME Mobile is source-grounded intelligence on the Rural Health Transformation Program: RHTP grants, awards, deadlines, state activity, and vendors.">
+<meta name="keywords" content="Rural Care Journey, RCJ, RHTP, RHTP grants, RHTP awards, RHTP deadlines, RHTP by state, RHTP vendors, Rural Health Transformation Program, AME Mobile">
 <meta name="author" content="AME Mobile">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://amemobile.net/">
+<link rel="preconnect" href="https://www.ruralcarejourney.com">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amemobile.net/">
-<meta property="og:title" content="Rural Care Journey — Rural Health Tracker & Intelligence">
-<meta property="og:description" content="Explore rural health transformation programs, funding opportunities, vendors, documents, and community connections across America.">
-<meta property="og:image" content="https://amemobile.net/images/rural_health.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:title" content="Rural Care Journey (RCJ) — Source-Grounded RHTP Intelligence">
+<meta property="og:description" content="Follow what is happening in the Rural Health Transformation Program: RHTP grants, awards, deadlines, state activity, and vendors across all 50 states.">
+<meta property="og:image" content="https://amemobile.net/images/rural_health.jpg">
+<meta property="og:image:width" content="1536">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Mobile health vehicle bringing care to a rural community">
 <meta property="og:site_name" content="AME Mobile">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://amemobile.net/">
-<meta name="twitter:title" content="Rural Care Journey — Rural Health Tracker & Intelligence">
-<meta name="twitter:description" content="Explore rural health transformation programs, funding opportunities, vendors, documents, and community connections across America.">
-<meta name="twitter:image" content="https://amemobile.net/images/rural_health.png">
+<meta name="twitter:title" content="Rural Care Journey (RCJ) — Source-Grounded RHTP Intelligence">
+<meta name="twitter:description" content="Follow what is happening in the Rural Health Transformation Program: RHTP grants, awards, deadlines, state activity, and vendors across all 50 states.">
+<meta name="twitter:image" content="https://amemobile.net/images/rural_health.jpg">
+<meta name="twitter:image:alt" content="Mobile health vehicle bringing care to a rural community">
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AME Mobile",
-  "alternateName": "American Medical Ecosystem Mobile",
-  "url": "https://amemobile.net",
-  "logo": "https://amemobile.net/images/rural_health.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@amemobile.net",
-    "contactType": "customer service"
-  },
-  "description": "Rural Care Journey is AME Mobile's research and intelligence platform for rural health transformation, funding opportunities, state programs, vendors, documents, and community connections.",
-  "sameAs": [
-    "https://ruralcarejourney.com"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "knowsAbout": [
-    "Rural Healthcare",
-    "Rural Care Journey",
-    "Opportunity Intelligence",
-    "Vendor Matchmaking",
-    "Applicant Support",
-    "Document Intelligence",
-    "Community Connections",
-    "FHIR",
-    "Rural Health Transformation Program",
-    "Digital Health Infrastructure",
-    "Connected Patient Journeys"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://amemobile.net/#organization",
+      "name": "AME Mobile",
+      "alternateName": "American Medical Ecosystem Mobile",
+      "url": "https://amemobile.net/",
+      "logo": "https://amemobile.net/images/rural_health.jpg",
+      "email": "info@amemobile.net",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@amemobile.net",
+        "contactType": "customer service"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "knowsAbout": [
+        "Rural Health Transformation Program",
+        "Rural healthcare",
+        "Rural health funding",
+        "Telehealth",
+        "Care coordination",
+        "Digital health infrastructure"
+      ],
+      "owns": {
+        "@id": "https://www.ruralcarejourney.com/#app"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.ruralcarejourney.com/#app",
+      "name": "Rural Care Journey",
+      "alternateName": "RCJ",
+      "url": "https://www.ruralcarejourney.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Rural Care Journey (RCJ) is source-grounded intelligence on the Rural Health Transformation Program (RHTP), connecting RHTP grants and opportunities, awards, deadlines, state implementation activity, documents, and vendors across all 50 states.",
+      "creator": {
+        "@id": "https://amemobile.net/#organization"
+      },
+      "provider": {
+        "@id": "https://amemobile.net/#organization"
+      },
+      "image": "https://amemobile.net/images/rural_health.jpg",
+      "featureList": [
+        "Opportunity Intelligence",
+        "Applicant Portal",
+        "Vendor Matchmaker",
+        "Document Intelligence",
+        "Community and daily updates",
+        "State program tracking"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Rural health applicants, vendors, researchers, implementation partners, and rural communities"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://amemobile.net/#website",
+      "url": "https://amemobile.net/",
+      "name": "AME Mobile",
+      "publisher": {
+        "@id": "https://amemobile.net/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://amemobile.net/#webpage",
+      "url": "https://amemobile.net/",
+      "name": "Rural Care Journey (RCJ) — RHTP Grants, Awards & State Intelligence",
+      "isPartOf": {
+        "@id": "https://amemobile.net/#website"
+      },
+      "about": {
+        "@id": "https://www.ruralcarejourney.com/#app"
+      },
+      "primaryImageOfPage": "https://amemobile.net/images/rural_health.jpg",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amemobile.net/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Rural Care Journey (RCJ)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rural Care Journey (RCJ) is AME Mobile’s research and intelligence platform for the Rural Health Transformation Program (RHTP). It brings together rural health funding opportunities, state programs, public documents, vendors, and community updates in one place."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Rural Health Transformation Program (RHTP)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Rural Health Transformation Program is a $50 billion federal investment, administered by CMS, to strengthen sustainable access to care in rural America. Funding flows from CMS to states, which run their own programs and release funding opportunities to rural providers and partners. RCJ tracks that state-level activity across all 50 states — see how RHTP funding flows from CMS to communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find RHTP grants, deadlines, and awards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rural Care Journey lists open RHTP grants and opportunities, RHTP deadlines closing soon, RHTP awards and funded projects, and RHTP activity by state, each linked to the underlying public record."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Rural Care Journey for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RCJ is built for grant applicants, rural hospitals and clinics, vendors, researchers, implementation partners, and rural communities who need a practical starting point for rural health transformation activity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is Rural Care Journey updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RCJ is updated daily from public sources, including state Flex Program offices, federal agencies, funding announcements, awards, and published program documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rural Care Journey affiliated with HRSA or CMS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Rural Care Journey is an independent research tool built by AME Mobile. It is not affiliated with HRSA or CMS and is intended for research use."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -231,11 +342,28 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
   .cta-section{padding:48px 28px}
   h1{font-size:40px}
 }
+.svc-title a,.why-title a{color:inherit;text-decoration:none}
+.svc-title a:hover{color:var(--teal)}
+.section-body a,.faq-item a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.faq-list{max-width:720px;border-top:0.5px solid var(--divider)}
+.faq-item{border-bottom:0.5px solid var(--divider);padding:20px 0}
+.faq-item summary{font-size:16px;font-weight:500;color:var(--ink);cursor:pointer;list-style-position:outside}
+.faq-item summary:hover{color:var(--teal)}
+.faq-item p{font-size:15px;color:var(--ink2);line-height:1.7;font-weight:300;margin-top:12px}
+.foot-links{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding:0;border:0}
+.foot-links a{font-size:12px;color:var(--ink2);text-decoration:none}
+.foot-links a:hover{color:var(--teal)}
+.stat-asof{font-size:12px;color:var(--ink2);opacity:0.7;margin-top:16px}
+.stat-asof a{color:inherit}
+.hub-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:40px}
+.hub-list .section-tag{grid-column:1/-1;margin-bottom:0}
+.hub-link{display:flex;flex-direction:column;gap:6px;padding:16px;border:0.5px solid var(--divider);border-radius:12px;text-decoration:none;transition:border-color 0.2s}
+.hub-link:hover{border-color:var(--teal)}
+.hub-title{font-size:14px;font-weight:500;color:var(--ink)}
+.hub-desc{font-size:12px;color:var(--ink2);line-height:1.5;font-weight:300}
 </style>
 </head>
 <body>
-
-<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Rural Care Journey — rural health tracker and intelligence by AME Mobile</h2>
 
 <div class="page">
   <nav class="fade-up visible">
@@ -247,7 +375,7 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
       <a href="#about">About RCJ</a>
       <a href="#services">What&rsquo;s Inside</a>
       <a href="#rhtp">Explore RCJ</a>
-      <a href="https://ruralcarejourney.com" target="_blank" rel="noopener" class="nav-cta">Visit Rural Care Journey &rarr;</a>
+      <a href="https://www.ruralcarejourney.com" target="_blank" rel="noopener" class="nav-cta">Visit Rural Care Journey &rarr;</a>
     </div>
   </nav>
 
@@ -255,20 +383,21 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
   <div class="hero">
     <div class="hero-eyebrow fade-up visible"><span class="dot"></span>Introducing Rural Care Journey</div>
     <h1 class="fade-up visible">Find the next step<br>in rural <em>health transformation</em></h1>
-    <p class="hero-sub fade-up visible">Rural Care Journey brings together the programs, opportunities, documents, vendors, and people shaping rural care across America.</p>
+    <p class="hero-sub fade-up visible">Rural Care Journey (RCJ) follows what is happening in the Rural Health Transformation Program &mdash; RHTP grants, awards, deadlines, state activity, and vendors &mdash; grounded in public sources and the people shaping rural care across America.</p>
     <div class="hero-actions fade-up visible">
-      <a href="https://ruralcarejourney.com" target="_blank" rel="noopener" class="btn-primary">Explore Rural Care Journey</a>
+      <a href="https://www.ruralcarejourney.com" target="_blank" rel="noopener" class="btn-primary">Explore Rural Care Journey</a>
       <a href="#services" class="btn-ghost">See What&rsquo;s Inside &rarr;</a>
     </div>
     <div class="hero-rule fade-up visible">
       <div class="hero-stat"><span class="num">50</span><span class="label">States Covered</span></div>
       <div class="stat-div"></div>
-      <div class="hero-stat"><span class="num">706</span><span class="label">Opportunities</span></div>
+      <div class="hero-stat"><span class="num">756</span><span class="label">Opportunities</span></div>
       <div class="stat-div"></div>
-      <div class="hero-stat"><span class="num">3,551</span><span class="label">Documents Indexed</span></div>
+      <div class="hero-stat"><span class="num">3,907</span><span class="label">Documents Indexed</span></div>
       <div class="stat-div"></div>
       <div class="hero-stat"><span class="num">Daily</span><span class="label">Public-Source Updates</span></div>
     </div>
+    <p class="stat-asof fade-up visible">Figures as of October 14, 2026 &middot; <a href="https://www.ruralcarejourney.com" target="_blank" rel="noopener">live totals on Rural Care Journey</a></p>
   </div>
 </div>
 
@@ -316,7 +445,7 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
         </div>
       </div>
       <div style="margin-top:56px">
-        <img src="images/rural_health.png" alt="AME Mobile — mobile health vehicle bringing care to a rural community" class="about-img">
+        <img src="images/rural_health.jpg" alt="Mobile health vehicle bringing care to a rural community — Rural Care Journey by AME Mobile" class="about-img" width="1536" height="1024" loading="lazy" decoding="async">
         <p class="section-body">Rural Care Journey helps people make sense of a fast-moving rural health landscape: what states are planning, where funding is available, which organizations are involved, and what is changing next.</p>
         <p class="section-body" style="margin-top:16px">Built by AME Mobile, RCJ turns public-source activity into a practical starting point for applicants, vendors, researchers, implementation partners, and rural communities.</p>
       </div>
@@ -332,35 +461,35 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
         <div class="svc-icon" style="background:var(--teal-lt)">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="9" width="14" height="7" rx="2" stroke="var(--teal)" stroke-width="1.5"/><path d="M6 9V6a3 3 0 016 0v3" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <p class="svc-title">Opportunity Intelligence</p>
+        <h3 class="svc-title"><a href="https://www.ruralcarejourney.com/opportunity-intelligence" target="_blank" rel="noopener">Opportunity Intelligence</a></h3>
         <p class="svc-body">Find open, upcoming, and recently closed rural health funding opportunities with the context needed to act.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon" style="background:var(--blue-lt)">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="10" rx="2" stroke="var(--blue)" stroke-width="1.5"/><path d="M6 16h6M9 13v3" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <p class="svc-title">Applicant Portal</p>
+        <h3 class="svc-title"><a href="https://www.ruralcarejourney.com/applicant" target="_blank" rel="noopener">Applicant Portal</a></h3>
         <p class="svc-body">Review opportunity requirements, build a draft application package, and prepare for expert review in one place.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon" style="background:var(--amber-lt)">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="var(--amber)" stroke-width="1.5"/><path d="M9 6v3l2 2" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <p class="svc-title">Vendor Matchmaker</p>
+        <h3 class="svc-title"><a href="https://www.ruralcarejourney.com/vendor-matchmaker" target="_blank" rel="noopener">Vendor Matchmaker</a></h3>
         <p class="svc-body">Connect rural health organizations with vendors and partners aligned to real program needs and implementation goals.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon" style="background:var(--coral-lt)">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="10" y="3" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="3" y="10" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/><rect x="10" y="10" width="5" height="5" rx="1" stroke="var(--coral)" stroke-width="1.5"/></svg>
         </div>
-        <p class="svc-title">Document Intelligence</p>
+        <h3 class="svc-title"><a href="https://www.ruralcarejourney.com/documents" target="_blank" rel="noopener">Document Intelligence</a></h3>
         <p class="svc-body">Search public program documents, guidance, awards, reports, and state activity as the landscape develops.</p>
       </div>
       <div class="service-card">
         <div class="svc-icon" style="background:var(--teal-lt)">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 14l4-4 3 3 5-6" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <p class="svc-title">Community &amp; Daily Updates</p>
+        <h3 class="svc-title"><a href="https://www.ruralcarejourney.com/community" target="_blank" rel="noopener">Community &amp; Daily Updates</a></h3>
         <p class="svc-body">Follow daily changes, practical guides, events, and conversations with people working on rural care transformation.</p>
       </div>
     </div>
@@ -391,7 +520,7 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
   <section id="rhtp">
     <p class="section-tag fade-up">Rural Care Journey</p>
     <h2 class="fade-up">Making rural health<br><em>easier to navigate</em></h2>
-    <p class="section-body fade-up">Rural Care Journey is AME Mobile&rsquo;s research and intelligence platform for following rural care pathways, public program activity, funding opportunities, and community support as they evolve across America.</p>
+    <p class="section-body fade-up">CMS sets federal policy for the <a href="https://www.cms.gov/priorities/rural-health-transformation-rht-program" target="_blank" rel="noopener">Rural Health Transformation Program</a>. Rural Care Journey follows what happens next: how each state implements its program, which <a href="https://www.ruralcarejourney.com/rhtp/opportunities" target="_blank" rel="noopener">RHTP grants and opportunities</a> are open, and where <a href="https://www.ruralcarejourney.com/rhtp/awards" target="_blank" rel="noopener">RHTP awards</a> are going &mdash; with each record linked to its public source.</p>
     <div class="rhtp-grid fade-up">
       <div class="rhtp-pillars">
         <div class="pillar"><div class="pillar-dot" style="background:var(--teal)"></div><span class="pillar-text">Rural health access &amp; equity</span></div>
@@ -410,29 +539,38 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
         <p class="rv-sub">Explore state programs, project narratives, grant opportunities, award announcements, and daily updates across all 50 states.</p>
         <div class="rv-stats" id="rhtp-stats">
           <div class="rv-stat">
-            <div class="rv-stat-num">60</div>
+            <div class="rv-stat-num">75</div>
             <div class="rv-stat-label">Active opportunities</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">706</div>
+            <div class="rv-stat-num">756</div>
             <div class="rv-stat-label">Total opportunities</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">3,551</div>
+            <div class="rv-stat-num">3,907</div>
             <div class="rv-stat-label">Documents indexed</div>
           </div>
           <div class="rv-stat">
-            <div class="rv-stat-num">9,516</div>
+            <div class="rv-stat-num">10,828</div>
             <div class="rv-stat-label">Activities tracked</div>
           </div>
         </div>
         <hr class="rv-divider">
-        <a href="https://ruralcarejourney.com" target="_blank" rel="noopener" class="rv-link">
-          <span class="rv-link-text">ruralcarejourney.com</span>
+        <a href="https://www.ruralcarejourney.com" target="_blank" rel="noopener" class="rv-link">
+          <span class="rv-link-text">See live RHTP data on ruralcarejourney.com</span>
           <span class="rv-link-arrow">&rarr;</span>
         </a>
-        <p class="rv-disclaimer">Not affiliated with HRSA &middot; For research use</p>
+        <p class="rv-disclaimer">Figures as of Oct 14, 2026 &middot; Not affiliated with HRSA or CMS &middot; For research use</p>
       </div>
+    </div>
+
+    <div class="hub-list fade-up">
+      <p class="section-tag">RHTP, by question</p>
+      <a class="hub-link" href="https://www.ruralcarejourney.com/rhtp/opportunities" target="_blank" rel="noopener"><span class="hub-title">RHTP grants &amp; opportunities</span><span class="hub-desc">Open RFAs, RFPs, NOFOs, and grants by state</span></a>
+      <a class="hub-link" href="https://www.ruralcarejourney.com/rhtp/deadlines" target="_blank" rel="noopener"><span class="hub-title">RHTP deadlines</span><span class="hub-desc">Opportunities closing in the next 7, 14, and 30 days</span></a>
+      <a class="hub-link" href="https://www.ruralcarejourney.com/rhtp/awards" target="_blank" rel="noopener"><span class="hub-title">RHTP awards</span><span class="hub-desc">Funded projects and award announcements by state</span></a>
+      <a class="hub-link" href="https://www.ruralcarejourney.com/rhtp/states" target="_blank" rel="noopener"><span class="hub-title">RHTP by state</span><span class="hub-desc">Implementation phase, opportunities, and awards for all 50 states</span></a>
+      <a class="hub-link" href="https://www.ruralcarejourney.com/rhtp/vendors" target="_blank" rel="noopener"><span class="hub-title">RHTP vendors</span><span class="hub-desc">Telehealth, workforce, and technology implementation partners</span></a>
     </div>
   </section>
 
@@ -452,12 +590,44 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
     <p class="section-tag fade-up">Why It Matters</p>
     <h2 class="fade-up">Making healthcare work<br>as an <em>ecosystem</em></h2>
     <div class="why-grid fade-up">
-      <div class="why-card"><p class="why-num">01</p><p class="why-title">Broader Reach</p><p class="why-body">Care that moves into communities &mdash; not waiting for communities to come to it.</p></div>
-      <div class="why-card"><p class="why-num">02</p><p class="why-title">Stronger Continuity</p><p class="why-body">Patients followed through every stage of their journey, from screening to sustained care.</p></div>
-      <div class="why-card"><p class="why-num">03</p><p class="why-title">Smarter Coordination</p><p class="why-body">Systems that talk to each other &mdash; and people who know how to make them work together.</p></div>
-      <div class="why-card"><p class="why-num">04</p><p class="why-title">Practical Technology</p><p class="why-body">Digital tools with real workflow value, not just platforms deployed and left behind.</p></div>
-      <div class="why-card"><p class="why-num">05</p><p class="why-title">Resilient Delivery</p><p class="why-body">Models built to sustain &mdash; financially, operationally, and in the communities they serve.</p></div>
-      <div class="why-card"><p class="why-num">06</p><p class="why-title">Ecosystem Thinking</p><p class="why-body">Every service, tool, and partnership designed as part of a connected whole &mdash; not isolated parts.</p></div>
+      <div class="why-card"><p class="why-num">01</p><h3 class="why-title">Broader Reach</h3><p class="why-body">Care that moves into communities &mdash; not waiting for communities to come to it.</p></div>
+      <div class="why-card"><p class="why-num">02</p><h3 class="why-title">Stronger Continuity</h3><p class="why-body">Patients followed through every stage of their journey, from screening to sustained care.</p></div>
+      <div class="why-card"><p class="why-num">03</p><h3 class="why-title">Smarter Coordination</h3><p class="why-body">Systems that talk to each other &mdash; and people who know how to make them work together.</p></div>
+      <div class="why-card"><p class="why-num">04</p><h3 class="why-title">Practical Technology</h3><p class="why-body">Digital tools with real workflow value, not just platforms deployed and left behind.</p></div>
+      <div class="why-card"><p class="why-num">05</p><h3 class="why-title">Resilient Delivery</h3><p class="why-body">Models built to sustain &mdash; financially, operationally, and in the communities they serve.</p></div>
+      <div class="why-card"><p class="why-num">06</p><h3 class="why-title">Ecosystem Thinking</h3><p class="why-body">Every service, tool, and partnership designed as part of a connected whole &mdash; not isolated parts.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section" style="padding-top:0">
+    <p class="section-tag fade-up">RCJ FAQ</p>
+    <h2 class="fade-up">Questions about<br><em>Rural Care Journey</em></h2>
+    <div class="faq-list fade-up">
+      <details class="faq-item" open>
+        <summary>What is Rural Care Journey (RCJ)?</summary>
+        <p>Rural Care Journey (RCJ) is AME Mobile&rsquo;s research and intelligence platform for the Rural Health Transformation Program (RHTP). It brings together rural health funding opportunities, state programs, public documents, vendors, and community updates in one place.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the Rural Health Transformation Program (RHTP)?</summary>
+        <p>The Rural Health Transformation Program is a $50 billion federal investment, administered by <a href="https://www.cms.gov/priorities/rural-health-transformation-rht-program" target="_blank" rel="noopener">CMS</a>, to strengthen sustainable access to care in rural America. Funding flows from CMS to states, which run their own programs and release funding opportunities to rural providers and partners. RCJ tracks that state-level activity across all 50 states &mdash; see <a href="https://www.ruralcarejourney.com/guides/how-rhtp-funding-flows-from-cms-to-communities" target="_blank" rel="noopener">how RHTP funding flows from CMS to communities</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where can I find RHTP grants, deadlines, and awards?</summary>
+        <p>Rural Care Journey lists <a href="https://www.ruralcarejourney.com/rhtp/opportunities" target="_blank" rel="noopener">open RHTP grants and opportunities</a>, <a href="https://www.ruralcarejourney.com/rhtp/deadlines" target="_blank" rel="noopener">RHTP deadlines closing soon</a>, <a href="https://www.ruralcarejourney.com/rhtp/awards" target="_blank" rel="noopener">RHTP awards and funded projects</a>, and <a href="https://www.ruralcarejourney.com/rhtp/states" target="_blank" rel="noopener">RHTP activity by state</a>, each linked to the underlying public record.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Who is Rural Care Journey for?</summary>
+        <p>RCJ is built for grant applicants, rural hospitals and clinics, vendors, researchers, implementation partners, and rural communities who need a practical starting point for rural health transformation activity.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How often is Rural Care Journey updated?</summary>
+        <p>RCJ is updated daily from public sources, including state Flex Program offices, federal agencies, funding announcements, awards, and published program documents.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Rural Care Journey affiliated with HRSA or CMS?</summary>
+        <p>No. Rural Care Journey is an independent research tool built by AME Mobile. It is not affiliated with HRSA or CMS and is intended for research use.</p>
+      </details>
     </div>
   </section>
 
@@ -467,7 +637,7 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
     <h2>Start your rural health<br>journey <em>today</em></h2>
     <p class="cta-sub">Explore Rural Care Journey for opportunities, documents, state activity, vendor connections, applicant tools, and the people shaping what comes next.</p>
     <div class="cta-actions">
-      <a href="https://ruralcarejourney.com" target="_blank" rel="noopener" class="btn-primary">Visit Rural Care Journey &rarr;</a>
+      <a href="https://www.ruralcarejourney.com" target="_blank" rel="noopener" class="btn-primary">Visit Rural Care Journey &rarr;</a>
       <a href="mailto:info@amemobile.net" class="btn-ghost">Contact AME Mobile</a>
     </div>
     <p class="tagline">Research &middot; Intelligence &middot; Action</p>
@@ -484,6 +654,18 @@ footer{border-top:0.5px solid var(--divider);padding:40px 0;display:flex;justify
       <a href="mailto:info@amemobile.net" class="foot-email">info@amemobile.net</a>
       <p class="foot-note" style="margin-top:4px">Rural Care Journey by AME Mobile</p>
     </div>
+    <nav class="foot-links" aria-label="Explore Rural Care Journey">
+      <a href="https://www.ruralcarejourney.com/rhtp/opportunities" target="_blank" rel="noopener">RHTP Grants &amp; Opportunities</a>
+      <a href="https://www.ruralcarejourney.com/rhtp/awards" target="_blank" rel="noopener">RHTP Awards</a>
+      <a href="https://www.ruralcarejourney.com/rhtp/deadlines" target="_blank" rel="noopener">RHTP Deadlines</a>
+      <a href="https://www.ruralcarejourney.com/rhtp/states" target="_blank" rel="noopener">RHTP by State</a>
+      <a href="https://www.ruralcarejourney.com/rhtp/vendors" target="_blank" rel="noopener">RHTP Vendors</a>
+      <a href="https://www.ruralcarejourney.com/rural-health-transformation-program" target="_blank" rel="noopener">Rural Health Transformation Program</a>
+      <a href="https://www.ruralcarejourney.com/documents" target="_blank" rel="noopener">RHTP Document Library</a>
+      <a href="https://www.ruralcarejourney.com/reports" target="_blank" rel="noopener">RHTP Intelligence Reports</a>
+      <a href="https://www.ruralcarejourney.com/guides" target="_blank" rel="noopener">RHTP Guides</a>
+      <a href="https://www.ruralcarejourney.com/community" target="_blank" rel="noopener">RCJ Community</a>
+    </nav>
   </footer>
 
 </div>
